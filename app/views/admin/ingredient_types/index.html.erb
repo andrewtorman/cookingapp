@@ -1,0 +1,18 @@
+<div>
+  <table>
+    <thead>
+      <th>ID</th>
+      <th>Name</th>
+    </thead>
+    <tbody>
+      <% @ingredient_types.each do |ingredient_type| %>
+      <tr>
+        <td><%= ingredient_type.id %></td>
+        <td><%= ingredient_type.name %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <%= link_to 'New Ingredient Type', new_admin_ingredient_type_path %>
+</div>

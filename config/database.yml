@@ -1,0 +1,11 @@
+common: &common
+  host: localhost
+  adapter: postgresql
+
+development:
+  <<: *common
+  database: cooking_dev
+
+test:
+  <<: *common
+  database: cooking_test

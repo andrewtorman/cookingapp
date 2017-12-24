@@ -1,0 +1,20 @@
+<div>
+  <table>
+    <tbody>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Quanity</th>
+      <th></th>
+    </tbody>
+      <% @ingredients.each do |ingredient| %>
+      <tr>
+        <td><%= ingredient.id %></td>
+        <td><%= ingredient.ingredient_type&.name %></td>
+        <td><%= ingredient.quantity %></td>
+        <td><%= link_to 'Edit', edit_ingredient_path(ingredient) %></td>
+      </tr>
+      <% end %>
+  </table>
+
+  <%= link_to 'New Ingredient', new_ingredient_path %>
+</div>
